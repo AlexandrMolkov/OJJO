@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="shortcut icon" href="img/logo/logo.svg" type="image/x-icon"/>
+    <link rel="stylesheet" href="css/style.min.css"/>
+    <title>Главная</title><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" >
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/choices.js/public/assets/styles/choices.min.css" >
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header ">
+        <div class="blur"></div>
+        <div class="header__content container">
+          <div class="header__content-row">
+            <div class="header__form-input-wrapper">
+              <div class="header__form-input-exit"></div>
+              <input class="header__form-input" type="text" name="search" form="headerform"/>
+            </div>
+            <div class="header__item-left">
+              <nav class="nav header__nav " id="headNav">
+                <ul class="nav__ul">
+                  <li class="nav__li"><a class="nav__link" href="#">Контрагентам</a></li>
+                  <li class="nav__li"><a class="nav__link" href="#">Дизайнерам</a></li>
+                  <li class="nav__li"><a class="nav__link" href="#">Вакансии</a></li>
+                </ul>
+              </nav>
+            </div><a class="logo header__logo" href="index.html"><img class="logo__image-main" src="img/logo/logo.svg" alt="logo" width="216" height="52"/></a>
+            <div class="header__item-right">
+              <form class="header__form" id="headerform" action="#">
+                <button class="search"><span>Поиск</span></button>
+              </form>
+              <div class="account-buttons">
+                <button class="account-btn">Вход</button><span class="slash">/</span>
+                <button class="account-btn">Регистрация</button>
+              </div>
+              <div class="header__buttons">
+                <button class="header__btn"><svg class="account"  width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M8 0C9.06087 0 10.0783 0.421427 10.8284 1.17157C11.5786 1.92172 12 2.93913 12 4C12 5.06087 11.5786 6.07828 10.8284 6.82843C10.0783 7.57857 9.06087 8 8 8C6.93913 8 5.92172 7.57857 5.17157 6.82843C4.42143 6.07828 4 5.06087 4 4C4 2.93913 4.42143 1.92172 5.17157 1.17157C5.92172 0.421427 6.93913 0 8 0ZM8 10C12.42 10 16 11.79 16 14V16H0V14C0 11.79 3.58 10 8 10Z" fill="white"/>
+</svg>
+                </button>
+                <button class="header__btn"><svg class="like" width="17" height="15" viewBox="0 0 17 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M8.97342 2.59641C6.21857 -1.65888 0.642853 0.659263 0.642853 5.29469C0.642853 8.77555 8.28685 14.2205 8.97342 14.9285C9.66471 14.2205 16.9286 8.77555 16.9286 5.29469C16.9286 0.694406 11.7334 -1.65888 8.97342 2.59641Z" fill="white"/>
+</svg>
+                </button>
+              </div>
+            </div>
+            <div class="burg header-burg" data-target="#head-nav-mobile"></div>
+            <div class="header__mobile-menu" id="head-nav-mobile">
+              <div class="header__mobile-menu-wrapper">
+                <nav class="nav header__mobile-menu-nav" id="">
+                  <ul class="nav__ul">
+                    <li class="nav__li"><a class="nav__link" href="#">Контрагентам</a></li>
+                    <li class="nav__li"><a class="nav__link" href="#">Дизайнерам</a></li>
+                    <li class="nav__li"><a class="nav__link" href="#">Вакансии</a></li>
+                  </ul>
+                </nav>
+                <ul class="nav__ul nav__ul-horizontal">
+                  <li class="nav__li"> 
+                    <button class="account-btn">Вход</button>
+                  </li>
+                  <li class="nav__link slash">/</li>
+                  <li class="nav__li"> 
+                    <button class="account-btn">Регистрация</button>
+                  </li>
+                </ul>
+                <ul class="nav__ul nav__ul-horizontal">
+                  <li class="nav__li"> 
+                    <button class="header__btn"><svg class="account-svg"  width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M8 0C9.06087 0 10.0783 0.421427 10.8284 1.17157C11.5786 1.92172 12 2.93913 12 4C12 5.06087 11.5786 6.07828 10.8284 6.82843C10.0783 7.57857 9.06087 8 8 8C6.93913 8 5.92172 7.57857 5.17157 6.82843C4.42143 6.07828 4 5.06087 4 4C4 2.93913 4.42143 1.92172 5.17157 1.17157C5.92172 0.421427 6.93913 0 8 0ZM8 10C12.42 10 16 11.79 16 14V16H0V14C0 11.79 3.58 10 8 10Z" fill="white"/>
+</svg>
+                    </button>
+                  </li>
+                  <li class="nav__li"> 
+                    <button class="header__btn"><svg class="like-svg" width="17" height="15" viewBox="0 0 17 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M8.97342 2.59641C6.21857 -1.65888 0.642853 0.659263 0.642853 5.29469C0.642853 8.77555 8.28685 14.2205 8.97342 14.9285C9.66471 14.2205 16.9286 8.77555 16.9286 5.29469C16.9286 0.694406 11.7334 -1.65888 8.97342 2.59641Z" fill="white"/>
+</svg>
+                    </button>
+                  </li>
+                </ul>
+                <div class="mobile-input-wrapper">
+                   <svg class="search-icon" width="26" height="26" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M19 17L13.846 11.846C14.7988 10.3979 15.1805 8.64774 14.917 6.93442C14.6536 5.22111 13.7638 3.66648 12.4199 2.57154C11.076 1.47659 9.37369 0.919227 7.64247 1.00735C5.91125 1.09547 4.27431 1.82281 3.04857 3.04855C1.82283 4.27429 1.09549 5.91123 1.00737 7.64245C0.91925 9.37366 1.47662 11.076 2.57156 12.4199C3.6665 13.7637 5.22113 14.6535 6.93445 14.917C8.64777 15.1804 10.3979 14.7988 11.846 13.846L17 19L19 17ZM3 7.99998C3 5.24298 5.243 2.99998 8 2.99998C10.757 2.99998 13 5.24298 13 7.99998C13 10.757 10.757 13 8 13C5.243 13 3 10.757 3 7.99998Z" fill="white"/>
+</svg>
+                  <input class="header__form-input header__form-input-mobile" type="text" name="search" form="headerform"/>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <main class="main">
+        <section class="catalog">
+          <div class="container">
+            <div class="catalog__content">
+              <h2 class="catalog__title visually-hidden">catalog</h2>
+              <div class="filter-list">
+                <select class="js-choice js-choice-brand" name="brand">
+                  <option>brand 1</option>
+                  <option>brand 2</option>
+                </select>
+                <select class="js-choice js-choice-price" name="price">
+                  <option>1000</option>
+                  <option>2000</option>
+                </select>
+                <select class="js-choice js-choice-whom" name="whom">
+                  <option>male</option>
+                  <option>female</option>
+                </select>
+                <select class="js-choice js-choice-collection" name="collection">
+                  <option>collection 1</option>
+                  <option>collection 2</option>
+                </select>
+                <select class="js-choice js-choice-season" name="season">
+                  <option>winter</option>
+                  <option>summer</option>
+                </select>
+                <select class="js-choice js-choice-event" name="event">
+                  <option>event 1</option>
+                  <option>event 2</option>
+                </select>
+              </div>
+              <div class="catalog__items">
+                <div class="catalog__items-row">
+                  <div class="product"><img class="product__img" src="img/rings.png" alt="кольца">
+                    <p class="product__type">Подвеска</p>
+                    <p class="product__name">Dolce & Gabanna</p><a class="btn product__btn" href="#">175 000 ₽</a><a class="product__link" href="product.html"></a>
+                  </div>
+                  <div class="product"><img class="product__img" src="img/rings.png" alt="кольца">
+                    <p class="product__type">Подвеска</p>
+                    <p class="product__name">Dolce & Gabanna</p><a class="btn product__btn" href="#">175 000 ₽</a><a class="product__link" href="product.html"></a>
+                  </div>
+                  <div class="product"><img class="product__img" src="img/rings.png" alt="кольца">
+                    <p class="product__type">Подвеска</p>
+                    <p class="product__name">Dolce & Gabanna</p><a class="btn product__btn" href="#">175 000 ₽</a><a class="product__link" href="product.html"></a>
+                  </div>
+                </div>
+                <div class="catalog__items-row">
+                  <div class="product"><img class="product__img" src="img/rings.png" alt="кольца">
+                    <p class="product__type">Подвеска</p>
+                    <p class="product__name">Dolce & Gabanna</p><a class="btn product__btn" href="#">175 000 ₽</a><a class="product__link" href="product.html"></a>
+                  </div>
+                  <div class="product"><img class="product__img" src="img/rings.png" alt="кольца">
+                    <p class="product__type">Подвеска</p>
+                    <p class="product__name">Dolce & Gabanna</p><a class="btn product__btn" href="#">175 000 ₽</a><a class="product__link" href="product.html"></a>
+                  </div>
+                  <div class="product"><img class="product__img" src="img/rings.png" alt="кольца">
+                    <p class="product__type">Подвеска</p>
+                    <p class="product__name">Dolce & Gabanna</p><a class="btn product__btn" href="#">175 000 ₽</a><a class="product__link" href="product.html"></a>
+                  </div>
+                </div>
+              </div><a class="btn catalog__btn" href="#">покажите еще</a>
+              <div class="catalog-bottom">
+                <div class="catalog-bottom__text-block">
+                  <div class="catalog-bottom__text">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet, lorem eu commodo porttitor erat. Amet mauris cursus bibendum in egestas. Nulla porttitor amet quam elit, mauris. Tortor egestas dignissim augue suspendisse rutrum pretium lobortis dolor. Commodo sagittis at amet faucibus faucibus id. Bibendum placerat convallis gravida eu quisque et augue. Sed dignissim amet ut vitae at ornare sed.</p>
+                    <p>Commodo sagittis at amet faucibus faucibus id. Bibendum placerat convallis gravida eu quisque et augue. Sed dignissim amet ut vitae at ornare sed.</p>
+                  </div>
+                  <div class="catalog-bottom__read-more">читать полностью</div>
+                </div>
+                <div class="catalog-bottom__icons">
+                  <div class="catalog-bottom__icon catalog-bottom__icon-deliver"> <img src="img/svg/delivery.svg" alt="" aria-hidden="true">
+                    <p>Бесплатная доставка</p>
+                  </div>
+                  <div class="catalog-bottom__icon catalog-bottom__icon-design"> <img src="img/svg/individual.svg" alt="" aria-hidden="true">
+                    <p>Индивидуальный дизайн</p>
+                  </div>
+                  <div class="catalog-bottom__icon catalog-bottom__icon-fitting"> <img src="img/svg/ribbon-design.svg" alt="" aria-hidden="true">
+                    <p>Бесплатная примерка</p>
+                  </div>
+                  <div class="catalog-bottom__icon catalog-bottom__icon-approach"> <img src="img/svg/jewelry.svg" alt="" aria-hidden="true">
+                    <p>Личный подход</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="subscribe">
+          <div class="subscribe__content container">
+            <p class="subscribe__subtitle subtitle">Полезные советы и персональный предложения</p>
+            <h2 class="subscribe__title title">Эксклюзивная рассылка</h2>
+            <div class="subscribe__items">
+              <div class="subscribe__item">
+                <ul class="subscribe__list">
+                  <li class="subscribe__li">Личный менеджер</li>
+                  <li class="subscribe__li">Доставка и оформление</li>
+                  <li class="subscribe__li">Индивидуальный дизайн</li>
+                </ul>
+              </div>
+              <div class="subscribe__item">
+                <div class="form subscribe__form">
+                  <div class="form__row">
+                    <input class="form__input" type="email" placeholder="Ваш e-mail">
+                    <button class="form__btn btn" type="submit">отправить</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+      <footer class="footer">
+        <div class="container">
+          <div class="footer__content">
+            <div class="footer__item">
+              <div class="footer__title">Полезные ссылки</div>
+              <ul class="footer__navigation list">
+                <li class="footer__navigation-li"><a class="footer__link link" href="#">Доставка</a></li>
+                <li class="footer__navigation-li"><a class="footer__link link" href="#">Оплата </a></li>
+                <li class="footer__navigation-li"><a class="footer__link link" href="#">Акции</a></li>
+                <li class="footer__navigation-li"><a class="footer__link link" href="#">Политика конфиденциальности</a></li>
+              </ul>
+            </div>
+            <div class="footer__item">
+              <div class="footer__title">оплата</div>
+              <p class="footer__par">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ullamcorper justo, nec, pellentesque.</p>
+              <div class="footer__payment"><img src="img/svg/visa.svg" alt="visa"><img src="img/svg/mastercard.svg" alt="mastercard"></div>
+            </div>
+            <div class="footer__item">
+              <div class="footer__title">контакты</div>
+              <div class="contacts"><a class="contact-phone" href="tel:+78122345655">8 (812) 234-56-55</a><a class="contact-phone" href="tel:+78122345655">8 (812) 234-56-55</a><a class="contact-mail" href="mailto:ojjo@ojjo.ru">ojjo@ojjo.ru</a></div>
+            </div>
+            <div class="footer__item">
+              <div class="footer__title">социальные сети</div>
+              <p class="footer__par">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ullamcorper justo, nec, pellentesque.</p>
+              <div class="social"> <a class="social__link" href="#"><img src="img/svg/social/youtube.svg" alt="youtube" width="26" height="26"></a><a class="social__link" href="#"><img src="img/svg/social/vk.svg" alt="vk" width="26" height="26"></a><a class="social__link" href="#"><img class="social__fb" src="img/svg/social/facebook.svg" alt="facebook" width="26" height="26"></a><a class="social__link" href="#"><img src="img/svg/social/telegram.svg" alt="telegram" width="26" height="26"></a><a class="social__link" href="#"><img class="social__e" src="img/svg/social/e.svg" alt="telegram" width="26" height="26"></a></div>
+            </div>
+          </div>
+          <div class="copyright">
+            <div>(c) 2020 OJJO jewelry</div>
+            <div>Договор публичной офферты</div>
+            <div>Контрагентам</div>
+            <div class="made">Сделано Figma.info</div>
+          </div>
+        </div>
+      </footer>
+    </div><script src="https://cdn.jsdelivr.net/npm/choices.js/public/assets/scripts/choices.min.js"></script>
+    <script src="js/app.min.js"></script>
+  </body>
+</html>
