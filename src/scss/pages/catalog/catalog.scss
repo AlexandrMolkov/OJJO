@@ -83,6 +83,20 @@
     }
     &__text{
 
+        max-height: 216px;
+        overflow: hidden;
+
+        &.show{
+            max-height: max-content;
+            overflow: auto;
+            margin-bottom: 30px;
+
+            &::before {
+                content: "";
+                background: none;
+            }
+        }
+
         position: relative;
         &::before {
             content: "";

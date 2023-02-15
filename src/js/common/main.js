@@ -35,6 +35,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
   
 
+  ///////////////////// read more
+
+  const readmoreButtons = document.querySelectorAll('.read-more')
+  readmoreButtons.forEach((e) => {
+      e.addEventListener('click', (e) => {
+      const target = document.getElementById(e.target.dataset.target)
+      target.classList.add('show')})
+    })
+    
+
 
 
 

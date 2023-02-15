@@ -2,7 +2,8 @@
     padding-top: 100px;
     padding-bottom: 100px;
 
-    background-image: url('/img/background.png');
+    background-color: $black;
+    background-image: url('../img/background.png');
     color: #fff;
 
     &__content{
