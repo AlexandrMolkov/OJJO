@@ -1,0 +1,55 @@
+include pug/head
+include pug/common/mixins/header
+
+doctype html
+html(lang="ru")
+    +head('Главная')
+    body
+        .wrapper
+            +header([{link:'#', content:'Контрагентам'},
+                {link:'#', content:'Дизайнерам'},
+                {link:'#', content:'Вакансии'},
+                ])
+            main.main
+                .contact.container
+                    .breadcrumbs
+                        a.breadcrumbs__item(href="index.html") Главная
+                        a.breadcrumbs__item Контакты
+                    h1.contact__title.title Контакты
+                    .contact__content 
+                        
+                        .contact__item
+                            .contact__item-title Главный офис
+                            ul.contact__list.list
+                                li.contact-location Невский 140, офис 1-5
+                                li.contact__li_pl-32 Невский 140, офис 1-5
+                        .contact__item
+                            .contact__item-title Телефоны
+                            ul.contact__list.list
+                                li 
+                                    a.contact__link.contact-phone(href="tel:+78124585645") 8 (812) 458-56-45
+                                li
+                                    a.contact__link(href="tel:+78124585645") 8 (812) 458-56-45
+                        .contact__item.contact__item_numbers
+                            .contact__item-title E-mail
+                            ul.contact__list.list
+                                li 
+                                    a.contact__link.contact-mail(href="mailto:office@ojjo.com") office@ojjo.com
+                                li
+                                    a.contact__link(href="mailto:office@ojjo.com") sales@ojjo.com
+                        .contact__item.contact__item_emails
+                            .contact__item-title Доп. адреса
+                            ul.contact__list.list
+                                li.contact-location Невский 142, офис 1-5
+                                li.contact__li_pl-32 Загородный 145, офис 11-15
+                    .map
+                        picture
+                            source(srcset="img/contact__maps.webp" type="image/webp")
+                            img.cover(src="img/contact__maps.png" alt="карта")
+
+
+            include pug/footer
+        script(src="js/app.min.js")
+       
+
+        

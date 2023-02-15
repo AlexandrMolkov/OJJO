@@ -1,0 +1,37 @@
+.tabs {
+    $borderWeight: 1px;
+    $borderColor: #dee2e6;  
+
+    &__buttons{
+        display: flex;
+        border-bottom: $borderWeight solid $borderColor;
+    }
+
+    &__button{
+        $padding: 5px;
+        background-color: #fff;
+        color: #0d6efd;
+        padding: $padding;
+        border: $borderWeight solid transparent;
+        margin-bottom: -1px;
+        transition: background-color 0.3s;
+
+        &_current{
+            color: #000;
+            border: $borderWeight solid $borderColor;
+            border-bottom: $borderWeight solid transparent;
+        }
+    }
+
+    &__content{
+        padding-top: 5px;
+        transition: opacity 0.3s;
+        opacity: 1;
+        
+        &_hidden{
+            opacity: 0;
+            
+        }
+
+    }
+}

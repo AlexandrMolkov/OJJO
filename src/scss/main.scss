@@ -1,0 +1,484 @@
+body {
+    font-family: Gilroy, Arial, sans-serif;
+    line-height: 140%;
+    color: $black;
+    background-color: $background;
+
+    &.lock{
+        overflow: hidden;
+    }
+
+
+}
+
+.blur{
+
+    position: absolute;
+    z-index: 11;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    backdrop-filter: blur(0px);
+    transition: backdrop-filter 1s;
+    pointer-events: none;
+
+    &_active{
+        backdrop-filter: blur(6px);
+        pointer-events:visible;
+    }
+}
+
+.wrapper{
+}
+
+.main{
+    background-color: $background;
+}
+
+.scroll, .scroll-wrapper{
+    width: 100px;
+    height: 100px;
+    overflow: auto;
+    border: 1px solid black;
+}
+.scroll-wrapper textarea{
+    height: 100px;
+    width: 100px;
+}
+
+.breadcrumbs{
+
+    padding-top: 60px;
+    padding-bottom: 10px;
+
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 150%;
+    
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    &__item{
+
+        &:first-child{
+            text-decoration: underline;
+        }
+
+
+        &:not(:last-child){
+            &:hover{
+                opacity: 0.7;
+            }
+        }
+
+        &:last-child{
+            &:hover{
+                cursor: default;
+            }
+        }
+
+        &:not(:first-child){
+
+            margin-left: 15px;
+            padding-left: 15px;
+
+            &::before {
+                content: "/";
+                position: relative;
+                left: -15px;
+                
+                
+            }
+        }
+
+
+
+    }
+}
+
+.title, .subtitle {
+    font-size: 48;
+    line-height: 140%;
+    letter-spacing: 0.01em;
+    
+    text-align: center;
+
+}
+
+.title{
+    font-weight: 800;
+    font-size: rem(30);
+    line-height: rem(41);
+    font-family: 'NotoSerif';
+    &_white{
+        color: #fff;
+    }
+}
+
+.subtitle {
+    font-size: 21px;
+    line-height: 44;
+    font-weight: 400;
+    line-height: 140%;
+    margin-bottom: 15px;
+    &_white{
+        color: #fff;
+    }
+   
+
+    &-arrow{
+
+
+        position: relative;
+        width: fit-content;
+        &::before {
+            content: "";
+            position: absolute;
+            top: -63%;
+            right: -258px;
+            width: 228px;
+            height: 100px;
+            background-image: url('/img/svg/arrow.svg');
+
+            @media (max-width: $laptop){
+                display: none;
+            }
+        }
+    }
+
+}
+.text {
+    font-size: rem(16);
+    line-height: rem(22.4);
+
+    @media (max-width: $tablet){
+        font-size: rem(12);
+        line-height: rem(21);
+    }
+}
+.flex-end{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.header{
+
+    .contact-location, .contact-phone, .contact-mail{
+        &::before {
+            top: -4px;
+            left: -9px;
+
+            @media (max-width: 1129px){
+            }
+        }
+    }
+}
+.li{
+    padding-left: 23px;
+    margin-bottom: 15.6px;
+
+    position: relative;
+    &::before {
+        content: "";
+        position: absolute;
+        top: 7px;
+        left: 0;
+        width: 8px;
+        height: 8px;
+        background: $theme;
+    }
+}
+.contact-location, .contact-phone, .contact-mail{
+    position: relative;
+    padding-left: 40px;
+    //margin-left: 30px;
+    white-space: pre;
+    
+    &::before {
+        content: "";
+        position: absolute;
+        top: -55%;
+        left: 0;
+        width: 24px;
+        height: 24px;
+        background-repeat: no-repeat;
+        background-size: auto;
+        background-position: center;
+    }
+
+    @media (max-width: $laptop){
+        font-size: rem(14);
+    }
+
+    @media (max-width: 960px){
+        margin-left: 0px;
+    }
+
+
+}
+.contact-location{
+    &::before {
+        background-image: url('../img/svg/icons/loc.svg');
+    }
+}
+.contact-phone{
+    &::before {
+        background-image: url('../img/svg/icons/phone.svg');
+    }
+}
+.contact-mail{
+    padding-top: 5px;
+    &::before {
+        background-image: url('../img/svg/icons/mail.svg');
+    }
+}
+
+.cover{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+.fill{
+    object-fit: fill;
+    width: 100%;
+    height: 100%;
+}
+
+#slider {flex-grow: 1;}
+
+*:focus {
+    outline: 1px solid #fff;
+}
+
+.laptop-hidden{
+    @media (max-width: $laptop){
+        display: none;
+    }
+}
+
+.tablet-hidden{
+    @media (max-width: $tablet){
+        display: none;
+    }
+}
+
+.swiper-slide{
+    display: flex;
+    justify-content: center;
+}
+
+section .swiper-button-prev, section .swiper-button-next{
+    width: 70px ;
+    height: 70px ;
+    background: $theme;
+    &::after{
+        display: none;
+    }
+    &::before{
+        content: "";
+        position: absolute;
+        width: 38px;
+        height: 38px;
+        background-position: center;
+        background-repeat: no-repeat;
+
+        @media (max-width: $laptop){
+
+            width: 12px;
+            height: 12px;
+            background-size: contain;
+        }
+
+
+    }
+
+    @media (max-width: $laptop){
+        width: 50px ;
+        height: 50px ;
+    }
+
+    @media (max-width: $mobileL){
+        width: 30px ;
+        height: 30px ;
+    }
+}
+.swiper-button-prev{
+    left: 150px !important;
+
+
+    @media (max-width: 1440px){
+        left: 100px !important;
+    }
+
+
+    @media (max-width: $laptop){
+        left: 50px !important;
+    }
+
+    @media (max-width: 539px){
+        left: 0px !important;
+    }
+
+    @media (max-width: $mobileL){
+/*         top: 94% !important;
+        left: 10px !important; */
+    }
+
+    &::before{
+        background-image: url('https://alexandrmolkov.github.io/school/img/svg/left-arrow.svg');
+       
+    }
+    
+}
+.swiper-button-next{
+    right: 150px !important;
+
+
+    @media (max-width: 1440px){
+        right: 100px !important;
+    }
+
+    @media (max-width: $laptop){
+        right: 50px !important;
+    }
+
+    @media (max-width: 539px){
+        right: 0px !important;
+    }
+
+    @media (max-width: $mobileL){
+/*         top: 94% !important;
+        right: 10px !important; */
+    }
+
+    &::before{
+        background-image: url('https://alexandrmolkov.github.io/school/img/svg/right-arrow.svg');
+    }
+    
+}
+
+.row{
+    display: flex;
+    justify-content: space-between;
+}
+.pre{
+    white-space: pre;
+}
+
+table{
+    width: 100%;
+    th{
+        text-align: start;
+    }
+    td{
+        vertical-align: top;
+    }
+}
+
+.btn{
+    padding: 14px 32px;
+    display: inline-block;
+    color: #fff;
+    background-color: $black;
+    text-align: center;
+    transition: all .3s;
+    margin: 1px auto;
+
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 21px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    transition: .6s;
+
+    &:hover{
+        cursor: pointer;
+        
+        color: $black;
+        text-shadow: 5px 0px 6px $grey;
+        box-shadow: 0px 0px 10px 1px #fff, 0px 0px 30px 30px #fff inset, 0px 0px 0px 1px $black;
+
+    }
+
+    &-white{
+        padding: 15px 35px;
+        letter-spacing: 0.1em;
+        font-size: 18px;
+        line-height: 21px;
+        font-weight: 500;
+        background: #fff;
+        color: $black;
+        text-transform: uppercase;
+
+        &:hover{
+
+            color: #fff;
+            box-shadow: 0px 0px 10px 1px #fff, 0px 0px 30px 30px $black inset, 0px 0px 0px 1px #fff;
+    
+        }
+    }
+
+    @media (max-width: $tablet){
+/*         width: 100%;
+        max-width: 276px;
+
+        font-size: rem(14);
+        line-height: rem(17); */
+    }
+
+    &:hover, &:focus {
+        //opacity: .7;
+    }
+    &:active{
+        color: rgba(#fff, .3);
+        opacity: .3;
+    }
+
+    &-border{
+        border: 2px solid #FFFFFF;
+        border-radius: 40px;
+        background: none;
+        color: #fff;
+    }
+
+    &.w-100{
+        width: 100%;
+
+        &:hover{
+            transform: rotate(-1deg) scale(1.1);
+        }
+    }
+    
+}
+a{
+    transition: .3s;
+    &:hover{
+        //opacity: 0.7;
+        border: 0;
+        outline: 0;
+    }
+    &:active{
+        //opacity: 0.7;
+        border: 0;
+        outline: 0;
+    }
+}
+
+footer a {
+    &:hover{
+        opacity: 0.7;
+    }
+}    
+
+
+@keyframes animopacity {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}

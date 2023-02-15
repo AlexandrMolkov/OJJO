@@ -1,0 +1,412 @@
+.header{
+    background: $black;
+    z-index: 1;
+
+    .container{
+        overflow: visible;
+    }
+
+    &__logo{
+        display: flex;
+        justify-content: center;
+    }
+
+    &__item-left{
+        margin-top: -4px;
+
+        @media (max-width: $laptop){
+            display: none;
+        }
+    }
+    &__item-right{
+        position: relative;
+        padding-left: 8px;
+        display: flex;
+        justify-content: flex-end;
+        gap: 40px;
+        margin-top: 2px;
+
+        @media (max-width: $laptop){
+            gap: 7px;
+
+            display: none;
+        }
+
+        @media (max-width: 539px){
+            gap: 0;
+        }
+
+    }
+    &__form{
+    }
+    &__form-input-exit{
+
+        position: absolute;
+        top: 18px;
+        right: 22px;
+        height: 4px;
+        width: 24px;
+        border-radius: 40px;
+        transition: .3s;
+
+        &:hover{
+            cursor: pointer;
+            transform: scale(1.1);
+        }
+
+        &:before {
+            content: "";
+
+            transition-duration: 0.5s;
+            position: absolute;
+            width: 15px;
+            height: 3px;
+            right: 0;
+            background-color: $black;
+            top: -10px;
+            border-radius: 40px;
+            transform: rotateZ(45deg) scaleX(1.25) translate(6.5px, 6.5px);
+          }
+        &:after {
+            content: "";
+
+            transition-duration: 0.5s;
+            position: absolute;
+            width: 15px;
+            height: 3px;
+            right: 0;
+            background-color: $black;
+            top: 10px; 
+            border-radius: 40px;
+            transform: rotateZ(-45deg) scaleX(1.25) translate(6px, -6px);
+          }
+    }
+    &__form-input-wrapper{
+        padding: 0 15px;
+        opacity: 0;
+        position: absolute;
+        left: 50%;
+        top: 100px;
+        transform: translateX(-50%);
+
+        max-width: 400px;
+        width: 100%;
+        height: 40px;
+
+
+
+    }
+    &__form-input{
+        width: 100%;
+        height: 100%;
+        color: $black;
+        font-family: inherit;
+        font-weight: 500;
+        padding: 5px 10px;
+        padding-right: 36px;
+        border-radius: 3px;
+        background-color: #fff;
+        border: 1px solid $black;
+        z-index: 0;
+        transition: .3s;
+
+        &::placeholder{
+            font-family: inherit;
+            font-size: inherit;
+        }
+
+        &_active{
+            opacity: 1;
+            z-index: 13;
+        }
+
+
+    }
+
+    &__content{
+        padding-top: 9px;
+        padding-bottom: 9px;
+    }
+
+    &_absolute{
+        
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        background: none;
+        
+    }
+
+    &__buttons{
+        display: flex;
+        gap: 29px;
+
+        @media (max-width: 539px){
+            gap: 10px;
+        }
+    }
+
+    .search{
+        z-index: 3;
+        position: relative;
+        padding-left: 35px;
+        color: #fff;
+        font-size: rem(14);
+        transition: .3s;
+
+        @media (max-width: 539px){
+            padding-left: 29px;
+        }
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 18px;
+            height: 18px;
+            background-image: url('/img/svg/icons/search.svg');
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+    }
+
+    & .burg {
+        justify-content: end;
+        @media (max-width: $laptop){
+            order: 3;
+            margin-left: 0;
+        }
+    }
+
+    .account-btn, &__btn, .search{
+        transition: opacity .3s;
+        &:hover{
+            opacity: .6;
+        }
+    }
+
+    .account-btn{
+        color: #fff;
+        font-size: 14px;
+        line-height: 150%;
+        position: relative;
+        left: -5px;
+    }
+
+    &__content-row{
+        width: 100%;
+        padding-top: 20px;
+        padding-bottom: 20px;
+
+        $gap: 20px;
+        
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        gap: $gap;
+        
+        > * {
+            flex: 1 1 calc((100% / 3) - ($gap*2));
+        }
+
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+
+        height: 100%;
+    }
+
+    .burg {
+        
+        margin-bottom: -1px;
+
+        z-index: 101;
+    }
+
+
+    &__mobile-menu{
+
+        $trigger: 1024px;
+
+        padding: 0px 30px;
+        color: #fff;
+
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        z-index: 99;
+        background-color: #333;
+
+        opacity: 0;
+        transition: .5s;
+        transform: translateY(-100%);
+
+    
+        &.show{
+            transform: translateY(0);
+        }
+
+        
+        @media (max-width: $trigger) {
+           opacity: 1;
+        }
+
+
+
+
+        &-wrapper{
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-direction: column;
+            height: 100%;
+
+            > *:not(:last-child) {
+                border-bottom: 1px solid rgba($grey, 0.5);
+                padding-bottom: 10px;
+            }
+        }
+
+        .nav__link, .account-btn {
+            
+            font-size: 22px;
+            left: 0;
+
+        }
+
+        .account-svg, .like-svg{
+            width: 28px;
+            height: 28px;
+        }
+
+        .nav__ul{
+            display: flex;
+            flex-direction: column;
+
+            gap: 20px;
+
+            &-horizontal{
+                flex-direction: row;
+                align-items: center;
+            }
+        }
+
+
+    }
+}
+.mobile-input-wrapper{
+    width: 100%;
+    height: 40px;
+
+    position: relative;
+
+
+    .search-icon{
+        position: absolute;
+        z-index: 200;
+        top: 6px;
+    }   
+
+    .header__form-input{
+        height: 100%;
+        font-size: 20px;
+        padding-left: 30px;
+        text-align: center;
+        background-color: $black;
+    }
+    .header__form-input:focus{
+        background-color: #e5e5e5;
+    }
+}
+.account-buttons {
+    .slash{
+        color: #fff;
+        padding-right: 5px;
+    }
+}
+
+$trigger: 1024px;
+
+.header__nav{
+    z-index: 10;
+    position: relative;
+    color: #fff;
+    text-transform: uppercase;
+
+    padding-top: 18px;
+    padding-bottom: 10px;
+    
+
+    @media (max-width: $trigger) {
+        overflow: hidden;
+        background-color: $background;
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        left: -100%;
+        min-width: 320px;
+        width: 100%;
+        max-width: 425px;
+        height: 100vh;
+        transition: all 0.3s;
+    }
+
+    & > ul {
+
+        @media (max-width: $trigger) {
+            flex-direction: column;
+            min-width: 320px;
+            height: 100%;
+            padding-top: 150px;
+            text-align: center;        
+            gap: 40px;
+            overflow: auto;
+            justify-content:flex-start;
+
+
+        }
+
+    }
+
+    a {
+        font-size: 14px;
+        line-height: 140%;
+        font-weight: 400;
+        letter-spacing: 0.05em;
+        text-transform: capitalize;
+
+        @media (max-width: $trigger){
+            font-size: 24px;
+            color: $black;
+        }
+
+        &_current {
+            &::before {
+                @media (max-width: $trigger){
+                    bottom: -14px;
+                    width: 100px;
+                    left: 50%;
+                    transform: translateX(-50%);
+                }
+            } 
+        }
+    }
+
+
+}
+.header__nav.show {
+    @media (max-width: $trigger) {
+        left: 0;
+        z-index: 100;
+    }
+}

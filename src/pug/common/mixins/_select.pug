@@ -1,0 +1,9 @@
+mixin select(id,options,name,selected,dataPlaceholder)
+    -var classes= 'custom-select ' + attributes.class
+    select.form-select(id=id name=name)
+        each option, i in options
+            if i==selected
+                option.option(selected)= option
+            else
+                option.option= option
+    div(class=classes data-place=dataPlaceholder data-target="#"+id tabindex="0")

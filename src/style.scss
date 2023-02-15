@@ -1,0 +1,26 @@
+@use "sass:math";
+
+@import "scss/common/_null.scss";
+@import "scss/common/_variables.scss";
+@import "scss/common/_visually-hidden.scss";
+@import "scss/common/_fonts.scss";
+@import "scss/common/_mixins.scss";
+@import "scss/common/_functions.scss";
+@import "scss/common/_container.scss";
+@import "scss/common/_burg.scss";
+@import "scss/common/_nav.scss";
+@import "scss/common/_logo.scss";
+@import "scss/common/tabs.scss";
+@import "scss/common/_marquee.scss";
+@import "scss/common/scrollbar.scss";
+
+@import "scss/main";
+@import "scss/header";
+@import "scss/footer";
+//@import "scss/pages/parts/map";
+@import "scss/pages/index";
+@import "scss/pages/catalog/catalog";
+@import "scss/pages/product/product";
+@import "scss/pages/parts/subscribe";
+@import "scss/pages/contacts/contacts";
+/* @import "scss/pages/contacts/contacts"; */
