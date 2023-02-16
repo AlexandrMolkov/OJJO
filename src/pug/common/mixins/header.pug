@@ -39,24 +39,25 @@ mixin header(navContent, navClass='', headerClass='')
                 +burg('#head-nav-mobile')(class="header-burg")
                 .header__mobile-menu#head-nav-mobile
                    .header__mobile-menu-wrapper
-                        +nav('nav', navContent,'')(class='header__mobile-menu-nav')
-                        ul.nav__ul.nav__ul-horizontal
-                            li.nav__li 
-                                button.account-btn Вход
-                            li.nav__link.slash /
-                            li.nav__li 
-                                button.account-btn Регистрация
-                        ul.nav__ul.nav__ul-horizontal
-                            li.nav__li 
-                                button.header__btn
-                                    <svg class="account-svg"  width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M8 0C9.06087 0 10.0783 0.421427 10.8284 1.17157C11.5786 1.92172 12 2.93913 12 4C12 5.06087 11.5786 6.07828 10.8284 6.82843C10.0783 7.57857 9.06087 8 8 8C6.93913 8 5.92172 7.57857 5.17157 6.82843C4.42143 6.07828 4 5.06087 4 4C4 2.93913 4.42143 1.92172 5.17157 1.17157C5.92172 0.421427 6.93913 0 8 0ZM8 10C12.42 10 16 11.79 16 14V16H0V14C0 11.79 3.58 10 8 10Z" fill="white"/>
-                                    </svg>
-                            li.nav__li 
-                                button.header__btn
-                                    <svg class="like-svg" width="17" height="15" viewBox="0 0 17 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M8.97342 2.59641C6.21857 -1.65888 0.642853 0.659263 0.642853 5.29469C0.642853 8.77555 8.28685 14.2205 8.97342 14.9285C9.66471 14.2205 16.9286 8.77555 16.9286 5.29469C16.9286 0.694406 11.7334 -1.65888 8.97342 2.59641Z" fill="white"/>
-                                    </svg>
+                        +nav('nav', navContent,'nav-menu-mobile')(class='header__mobile-menu-nav')
+                        nav.nav.nav-mobile
+                            ul.nav__ul.nav__ul-horizontal
+                                li.nav__li 
+                                    button.account-btn Вход
+                                li.nav__link.slash /
+                                li.nav__li 
+                                    button.account-btn Регистрация
+                            ul.nav__ul.nav__ul-horizontal
+                                li.nav__li 
+                                    button.header__btn
+                                        <svg class="account-svg"  width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M8 0C9.06087 0 10.0783 0.421427 10.8284 1.17157C11.5786 1.92172 12 2.93913 12 4C12 5.06087 11.5786 6.07828 10.8284 6.82843C10.0783 7.57857 9.06087 8 8 8C6.93913 8 5.92172 7.57857 5.17157 6.82843C4.42143 6.07828 4 5.06087 4 4C4 2.93913 4.42143 1.92172 5.17157 1.17157C5.92172 0.421427 6.93913 0 8 0ZM8 10C12.42 10 16 11.79 16 14V16H0V14C0 11.79 3.58 10 8 10Z" fill="white"/>
+                                        </svg>
+                                li.nav__li 
+                                    button.header__btn
+                                        <svg class="like-svg" width="17" height="15" viewBox="0 0 17 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M8.97342 2.59641C6.21857 -1.65888 0.642853 0.659263 0.642853 5.29469C0.642853 8.77555 8.28685 14.2205 8.97342 14.9285C9.66471 14.2205 16.9286 8.77555 16.9286 5.29469C16.9286 0.694406 11.7334 -1.65888 8.97342 2.59641Z" fill="white"/>
+                                        </svg>
 
                         .mobile-input-wrapper 
                             <svg class="search-icon" width="26" height="26" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">

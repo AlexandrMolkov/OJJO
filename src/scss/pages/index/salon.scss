@@ -6,6 +6,10 @@
     background-image: url('../img/background.png');
     color: #fff;
 
+    .webp & {
+        background-image: url('../img/background.webp');
+    }
+
     &__content{
         display: flex;
         flex-direction: column;

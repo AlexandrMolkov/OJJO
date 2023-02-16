@@ -82,8 +82,8 @@ const images = ()=> {
             }))
         )
         .pipe(imagemin([
-            mozjpeg({quality: 70, progressive: true}),
-            optipng({optimizationLevel: 5}),
+            mozjpeg({quality: 75, progressive: true}),
+            optipng({optimizationLevel: 7}),
         ]))
         .pipe(gulp.dest(`${BUILD_FOLDER}/img`))
         .pipe(gulp.src(`${SOURCE_FOLDER}/img/**/*`))

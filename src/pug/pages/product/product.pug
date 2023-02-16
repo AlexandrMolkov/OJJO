@@ -1,34 +1,41 @@
 section.product-section
     .container
-        .product-section__content
-            h2.product-section__title.visually-hidden product-section
-            .product-section__gallery 
-                a.product-section__image-wrapper.product-section__image-wrapper_big(data-fancybox="gallery" data-caption="Optional caption" href="img/rings-big.png")
-                    img.cover(src="img/rings-big.png", alt="кольца" width="540" height="430")
-                a.product-section__image-wrapper(data-fancybox="gallery" data-caption="Optional caption" href="img/rings.png")
-                    img.cover(src="img/rings.png", alt="кольца" width="160" height="120")
-                a.product-section__image-wrapper(data-fancybox="gallery" data-caption="Optional caption" href="img/rings.png")
-                    img.cover(src="img/rings.png", alt="кольца" width="160" height="120")
-                a.product-section__image-wrapper(data-fancybox="gallery" data-caption="Optional caption" href="img/rings.png")
-                    img.cover(src="img/rings.png", alt="кольца" width="160" height="120")
-            .product-section__info
-                .product-section__info-inner
-                    .product-section__name Подвеска Dolce & Gabbara
-                    .product-section__row.product-section__row_line
-                        .product-section__category Категория:
-                            span.product-section__category_name Подвески
-                        .product-section__brand Бренд:
-                            span.product-section__brand_name Dolce & Gabbara
-                    .product-section__text
+        .product-section__item.product-item
+            .product-item__gallery 
+                a.product-item__image-wrapper.product-item__image-wrapper_big(data-fancybox="gallery" data-caption="Optional caption" href="img/rings-big.png")
+                    picture
+                        source(srcset="img/rings-big.webp" type="image/webp")
+                        img.cover(src="img/rings-big.png" alt="кольца" width="540" height="430")
+                a.product-item__image-wrapper(data-fancybox="gallery" data-caption="Optional caption" href="img/rings.png")
+                    picture
+                        source(srcset="img/rings.webp" type="image/webp")
+                        img.cover(src="img/rings.png" alt="кольца" width="160" height="120")
+                a.product-item__image-wrapper(data-fancybox="gallery" data-caption="Optional caption" href="img/rings.png")
+                    picture
+                        source(srcset="img/rings.webp" type="image/webp")
+                        img.cover(src="img/rings.png" alt="кольца" width="160" height="120")
+                a.product-item__image-wrapper(data-fancybox="gallery" data-caption="Optional caption" href="img/rings.png")
+                    picture
+                        source(srcset="img/rings.webp" type="image/webp")
+                        img.cover(src="img/rings.png" alt="кольца" width="160" height="120")
+            .product-item__info
+                .product-item__info-inner
+                    h1.product-item__name Подвеска Dolce & Gabbara
+                    .product-item__row.product-item__row_line
+                        .product-item__category Категория:
+                            span.product-item__category-name Подвески
+                        .product-item__brand Бренд:
+                            span.product-item__brand-name Dolce & Gabbara
+                    .product-item__text
                         p.
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Blandit mattis scelerisque odio nunc. Ipsum quis facilisis turpis vulputate. Viverra dignissim in nec phasellus. Tincidunt est ipsum diam, vestibulum dignissim dui diam. Et nulla sit convallis orci est, fames sit luctus lacus. Nunc donec malesuada amet eget eget pharetra. Ultricies et, ac varius at amet viverra feugiat non massa.
                         p.
                             Vel vel in urna, sodales urna ac sed felis. Tellus augue et senectus malesuada faucibus sollicitudin ornare. Sit non et sit enim in ornare velit. Ac imperdiet vitae, orci, nec scelerisque enim sit enim risus. 
                             Et nulla sit convallis orci est, fames sit luctus lacus. 
-                    .product-section__price 200 000 ₽ 
-                    .product-section__row
-                        button.btn.product-section__btn купить
-                        button.btn.btn-white.product-section__btn.product-section__btn_add добавить в корзину
+                    .product-item__price 200 000 ₽ 
+                    .product-item__row
+                        button.btn.product-item__btn купить
+                        button.btn.btn-white.product-item__btn.product-item__btn_add добавить в корзину
 
 
 
