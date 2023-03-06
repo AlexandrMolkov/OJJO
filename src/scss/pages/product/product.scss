@@ -24,6 +24,9 @@
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
+
+        max-width: 540px;
+        margin: 0 auto;
         
     }
 
@@ -36,6 +39,10 @@
         flex: 1 0 calc((100%) - (30px*2));
         overflow: hidden;
         width: 100%;
+
+        &:hover{
+            cursor: zoom-in !important;
+        }
     }
     
 

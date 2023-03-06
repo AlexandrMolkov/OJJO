@@ -2,9 +2,16 @@
 
 document.addEventListener('DOMContentLoaded', () => {
 
+  
+  new Panzoom(document.getElementById("zoom"), { click: "toggleCover" })
+
   let Fancybox
+  
   if(Fancybox){
+    
+    
     Fancybox.defaults.infinite = 0;
+
   }
 
   const blur = document.querySelector('.blur')
