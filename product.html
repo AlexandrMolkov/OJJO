@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="css/style.min.css"/>
     <title>Главная</title><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" >
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/choices.js/public/assets/styles/choices.min.css" >
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/panzoom/panzoom.css" >
   </head>
   <body>
     <div class="wrapper">
@@ -100,9 +101,9 @@
         <section class="product-section">
           <div class="container">
             <div class="product-section__item product-item">
-              <div class="product-item__gallery"> <a class="product-item__image-wrapper product-item__image-wrapper_big" data-fancybox="gallery" data-caption="Optional caption" href="img/rings-big.png">
+              <div class="product-item__gallery"> <a class="f-panzoom product-item__image-wrapper product-item__image-wrapper_big" id="zoom" href="img/rings-big.png">
                   <picture>
-                    <source srcset="img/rings-big.webp" type="image/webp"><img class="cover" src="img/rings-big.png" alt="кольца" width="540" height="430">
+                    <source srcset="img/rings-big.webp" type="image/webp"><img class="f-panzoom__content cover" src="img/rings-big.png" alt="кольца" width="540" height="430">
                   </picture></a><a class="product-item__image-wrapper" data-fancybox="gallery" data-caption="Optional caption" href="img/rings.png">
                   <picture>
                     <source srcset="img/rings.webp" type="image/webp"><img class="cover" src="img/rings.png" alt="кольца" width="160" height="120">
@@ -245,6 +246,7 @@
         </div>
       </footer>
     </div><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/panzoom/panzoom.umd.js"></script>
     <script src="js/app.min.js"></script>
   </body>
 </html>

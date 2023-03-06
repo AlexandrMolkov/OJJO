@@ -103,19 +103,22 @@ h6 {
 @font-face {
   font-family: "Gilroy";
   font-weight: 400;
-  src: url("../fonts/gilroy-regular.woff2"), url("../fonts/gilroy-regular.woff"), url("../fonts/gilroy-regular.ttf");
+  src: url("../fonts/gilroy-regular.woff2") format("woff2"), url("../fonts/gilroy-regular.woff") format("woff");
+  font-display: swap;
 }
 
 @font-face {
   font-family: "Gilroy";
   font-weight: 500;
-  src: url("../fonts/gilroy-medium.woff2"), url("../fonts/gilroy-medium.woff"), url("../fonts/gilroy-medium.ttf");
+  src: url("../fonts/gilroy-medium.woff2") format("woff2"), url("../fonts/gilroy-medium.woff") format("woff");
+  font-display: swap;
 }
 
 @font-face {
   font-family: "NotoSerif";
   font-weight: 700;
-  src: url("../fonts/NotoSerif-Bold.woff2"), url("../fonts/NotoSerif-Bold.woff"), url("../fonts/NotoSerif-Bold.ttf");
+  src: url("../fonts/NotoSerif-Bold.woff2") format("woff2"), url("../fonts/NotoSerif-Bold.woff") format("woff");
+  font-display: swap;
 }
 
 .container {
@@ -1631,6 +1634,10 @@ body {
   text-transform: uppercase;
 }
 
+.hero__btn:hover {
+  border: 1px solid #fff;
+}
+
 .hero__content {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1939,6 +1946,10 @@ body {
   font-size: 1.125rem;
   line-height: 140%;
   margin-bottom: 60px;
+}
+
+.salon__btn:hover {
+  background: none;
 }
 
 .blogs {
@@ -2340,6 +2351,8 @@ body {
 
 .product__img {
   margin-bottom: 26px;
+  width: 100%;
+  height: auto;
 }
 
 .product__type {
@@ -2421,6 +2434,8 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  max-width: 540px;
+  margin: 0 auto;
 }
 
 .product-item__image-wrapper {
@@ -2436,6 +2451,11 @@ body {
           flex: 1 0 calc(100% - 60px);
   overflow: hidden;
   width: 100%;
+}
+
+.product-item__image-wrapper_big:hover {
+  cursor: -webkit-zoom-in !important;
+  cursor: zoom-in !important;
 }
 
 .product-item__info {
@@ -2665,6 +2685,7 @@ body {
       -ms-grid-row-align: stretch;
       align-self: stretch;
   border: 1px solid #D6D6D6;
+  color: #333;
   width: 200px;
   height: 45px;
 }
