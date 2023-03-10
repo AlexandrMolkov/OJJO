@@ -2,17 +2,15 @@
 
 document.addEventListener('DOMContentLoaded', () => {
 
-  
-  new Panzoom(document.getElementById("zoom"), { click: "toggleCover" })
-
-  let Fancybox
-  
-  if(Fancybox){
-    
-    
-    Fancybox.defaults.infinite = 0;
-
+ 
+  if(document.getElementById("zoom")){
+    new Panzoom(document.getElementById("zoom"), { click: "toggleCover" })
   }
+
+  if(document.querySelector("[data-fancybox]")) {
+    Fancybox.defaults.infinite = 0;
+  }
+  
 
   const blur = document.querySelector('.blur')
   const anchors = document.querySelectorAll('a[href*="#"]')
@@ -31,14 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
   
   
   
-  window.addEventListener('resize', () =>  {
-    if(window.innerWidth > 1024) {
-      document.body.classList.remove(`lock`)
-      document.querySelector(document.querySelector(`.burg`).dataset.target).classList.remove(`show`)
-      document.querySelector(`.burg`).classList.remove(`open`)
-      blur.classList.remove('blur_active')
-    }
-  });
+
 
   
 
@@ -148,6 +139,48 @@ document.addEventListener('DOMContentLoaded', () => {
 
   }
 
+
+  /////////////////// popup
+
+  document.querySelectorAll('.account-reg').forEach( b => {
+    b.addEventListener('click', (e) => {
+      document.getElementById('popupreg')
+        .classList.add('visible')
+        document.body.classList.add(`lock`)
+    })
+  })
+  document.querySelectorAll('.account-auth').forEach( b => {
+    b.addEventListener('click', (e) => {
+      document.getElementById('popupauth')
+        .classList.add('visible')
+        document.body.classList.add(`lock`)
+    })
+  })
+
+
+
+  document.querySelectorAll('.popup-registration__exit-button')
+    .forEach( b => {    
+        b.addEventListener('click', (e) => {
+            e.target.closest('.popup-registration')
+            .classList.remove('visible')
+          document.body.classList.remove(`lock`)
+        })
+      })
+
+
+
+
+
+
+
+      window.addEventListener('resize', () =>  {
+          document.body.classList.remove(`lock`)
+          document.querySelector(document.querySelector(`.burg`).dataset.target).classList.remove(`show`)
+          document.querySelector(`.burg`).classList.remove(`open`)
+          blur.classList.remove('blur_active')
+          document.getElementById('popupreg').classList.remove('visible')
+      });
 
 
 })

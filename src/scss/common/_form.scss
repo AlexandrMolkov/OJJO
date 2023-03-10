@@ -4,23 +4,16 @@
     position: relative;
     z-index: 2;
 
+    background: #fff;
+    
     text-align: center;
-
-/*     @media (max-width: $tablet){
-        padding-top: 44px;
-        padding-left: 22px;
-        padding-right: 22px;
-        padding-bottom: 65px;
-        border-radius: 40px;
-        margin-bottom: 40px;
-    } */
 
     &__title{
         margin-bottom: 52px;
 
         @media (max-width: $tablet){
-            font-size: rem(24);
-            line-height: rem(29);
+            font-size: 24px;
+            line-height: 29px;
         }
     }
 
@@ -51,8 +44,8 @@
 
         border: 2px solid #fff;
         color: #fff;
-        background-color: transparent;
-
+        background-color: #fff;
+        width: 100%;
         padding: 15px 20px;
         font-size: 14px;
         line-height: 16px;
@@ -82,15 +75,11 @@
         align-self: stretch;
         border: 1px solid $grey;
         color: $black;
-        width: 200px;
+        
         height: 45px;
 
         &:focus{
             outline: 2px solid $theme;
-        }
-
-        @media (max-width: $laptop){
-            margin-left: 14px;
         }
 
         @media (max-width: $tablet){
@@ -100,6 +89,10 @@
         @media (max-width: 539px){
             width: 100%;
         }
+
+        &_w-200{
+            width: 200px;
+        }
        
     }
 
@@ -107,8 +100,6 @@
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         gap: 14px;
-        background: #fff;
-        padding: 20px 22px;
 
 
         @media (max-width: 539px){
@@ -116,28 +107,6 @@
                 grid-column: span 4;
             }
         }
-
-/*         @media (max-width: $desktop){
-            padding-left: 40px;
-            padding-right: 40px;
-
-            margin-bottom: 85px;
-
-            > * {
-                grid-column: span 4;
-            }
-            
-        }
-
-        @media (max-width: $laptop){
-            padding-left: 0;
-            padding-right: 0;
-            margin-bottom: 10px;
-        }
-        @media (max-width: $tablet){
-            gap: 22px;
-            margin-bottom: 22px;
-        } */
         
         > * {
             grid-column: span 2;
@@ -147,6 +116,9 @@
             > * {
                 grid-column: span 4;
             }
+        }
+        &_mb_30{
+            margin-bottom: 30px;
         }
     }
 

@@ -21,9 +21,9 @@ mixin header(navContent, navClass='', headerClass='')
                         button.search
                             span Поиск
                     .account-buttons
-                        button.account-btn Вход
+                        button.account-btn.account-auth Вход
                         span.slash /
-                        button.account-btn Регистрация
+                        button.account-btn.account-reg Регистрация
                     .header__buttons
                         button.header__btn
                             <svg class="account"  width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -43,10 +43,10 @@ mixin header(navContent, navClass='', headerClass='')
                         nav.nav.nav-mobile
                             ul.nav__ul.nav__ul-horizontal
                                 li.nav__li 
-                                    button.account-btn Вход
+                                    button.account-btn.account-auth Вход
                                 li.nav__link.slash /
                                 li.nav__li 
-                                    button.account-btn Регистрация
+                                    button.account-btn.account-reg Регистрация
                             ul.nav__ul.nav__ul-horizontal
                                 li.nav__li 
                                     button.header__btn
