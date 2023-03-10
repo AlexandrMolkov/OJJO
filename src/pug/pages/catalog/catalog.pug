@@ -5,23 +5,36 @@ section.catalog
             h1.catalog__title.visually-hidden catalog
             .filter-list
                 select.js-choice.js-choice-brand(name="brand")
-                    option brand 1
-                    option brand 2
+                    option(data-hide="true") Бренд 
+                    option(value="brand 1") brand 1
+                    option(value="brand 2") brand 2
+                    option(value="brand 3") brand 3
+                    option(value="brand 4") brand 4
                 select.js-choice.js-choice-price(name="price")
-                    option 1000
-                    option 2000
+                    option Цена
+                    option(value="1000") 1000
+                    option(value="5000") 5000
+                    option(value="10000") 10000
+                    option(value="25000") 25000
                 select.js-choice.js-choice-whom(name="whom")
-                    option male
-                    option female
+                    option Для кого
+                    option(value="male") male
+                    option(value="female") female
                 select.js-choice.js-choice-collection(name="collection")
-                    option collection 1
-                    option collection 2
+                    option Коллекция 
+                    option(value="collection 1") collection 1
+                    option(value="collection 2") collection 2
+                    option(value="collection 3") collection 3
                 select.js-choice.js-choice-season(name="season")
-                    option winter
-                    option summer
+                    option Сезон
+                    option(value="winter") winter
+                    option(value="summer") summer
                 select.js-choice.js-choice-event(name="event")
-                    option event 1
-                    option event 2
+                    option Событие 
+                    option(value="event 1") event 1
+                    option(value="event 2") event 2
+                    option(value="event 3") event 3
+                    option(value="event 4") event 4
             .catalog__items
                 .catalog__items-row
                     .product

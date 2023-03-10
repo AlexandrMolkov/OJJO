@@ -309,10 +309,21 @@
     }
 }
 
-
+#choices--brand-jv-item-choice-1,
+#choices--price-6i-item-choice-5, 
+#choices--whom-v0-item-choice-1,
+#choices--collection-6y-item-choice-1, 
+#choices--season-7j-item-choice-1,
+#choices--event-4y-item-choice-1 {
+    display: none;
+}
 
 .choices *{
     border: 0 !important;
+}
+.choices__list--dropdown{
+    border: 1px solid $grey !important;
+    border-top: 0 !important;
 }
 .choices__inner{
     padding-left: 0px !important;
@@ -328,6 +339,7 @@
     background: $background !important;
     border: 0;
 }
+
 .is-highlighted{
     background-color: #fff !important;
 }

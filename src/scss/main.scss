@@ -29,8 +29,6 @@ body {
     }
 }
 
-.wrapper{
-}
 
 .main{
     background-color: $background;
@@ -246,101 +244,6 @@ body {
     @media (max-width: $tablet){
         display: none;
     }
-}
-
-.swiper-slide{
-    display: flex;
-    justify-content: center;
-}
-
-section .swiper-button-prev, section .swiper-button-next{
-    width: 70px ;
-    height: 70px ;
-    background: $theme;
-    &::after{
-        display: none;
-    }
-    &::before{
-        content: "";
-        position: absolute;
-        width: 38px;
-        height: 38px;
-        background-position: center;
-        background-repeat: no-repeat;
-
-        @media (max-width: $laptop){
-
-            width: 12px;
-            height: 12px;
-            background-size: contain;
-        }
-
-
-    }
-
-    @media (max-width: $laptop){
-        width: 50px ;
-        height: 50px ;
-    }
-
-    @media (max-width: $mobileL){
-        width: 30px ;
-        height: 30px ;
-    }
-}
-.swiper-button-prev{
-    left: 150px !important;
-
-
-    @media (max-width: 1440px){
-        left: 100px !important;
-    }
-
-
-    @media (max-width: $laptop){
-        left: 50px !important;
-    }
-
-    @media (max-width: 539px){
-        left: 0px !important;
-    }
-
-    @media (max-width: $mobileL){
-/*         top: 94% !important;
-        left: 10px !important; */
-    }
-
-    &::before{
-        background-image: url('https://alexandrmolkov.github.io/school/img/svg/left-arrow.svg');
-       
-    }
-    
-}
-.swiper-button-next{
-    right: 150px !important;
-
-
-    @media (max-width: 1440px){
-        right: 100px !important;
-    }
-
-    @media (max-width: $laptop){
-        right: 50px !important;
-    }
-
-    @media (max-width: 539px){
-        right: 0px !important;
-    }
-
-    @media (max-width: $mobileL){
-/*         top: 94% !important;
-        right: 10px !important; */
-    }
-
-    &::before{
-        background-image: url('https://alexandrmolkov.github.io/school/img/svg/right-arrow.svg');
-    }
-    
 }
 
 .row{

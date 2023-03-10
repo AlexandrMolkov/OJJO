@@ -93,6 +93,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const choices = new Choices(element,{
       searchEnabled: false,
       itemSelectText: '',
+      placeholder: true,
+      placeholderValue: 'privet',
+      searchPlaceholderValue: 'privet',
+      prependValue: 'privet',
+      appendValue: 'privet',
     });
   }
 
