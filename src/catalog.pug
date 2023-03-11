@@ -3,7 +3,7 @@ include pug/common/mixins/header
 
 doctype html
 html(lang="ru")
-    +head('Главная')
+    +head('Каталог')
     body
         .wrapper
             +header([{link:'#', content:'Контрагентам'},
@@ -13,7 +13,9 @@ html(lang="ru")
             main.main
                 include pug/pages/catalog/catalog
                 include pug/pages/parts/subscribe
+                
             include pug/footer
+            include pug/pages/parts/popup
         <script src="https://cdn.jsdelivr.net/npm/choices.js/public/assets/scripts/choices.min.js"></script>
         script(src="js/app.min.js")
         

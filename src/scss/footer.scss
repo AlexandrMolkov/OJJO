@@ -114,18 +114,7 @@ body {
         margin-bottom: 20px;
     }
 
-    .social{
-        display: flex;
-        gap: 20px;
 
-        @media (max-width: $laptop){
-            padding-left: 0;
-        }
-        
-        @media (max-width: $tablet){
-            margin-bottom: 30px;
-        }
-    }
 
     .contacts{
 
@@ -133,7 +122,9 @@ body {
         flex-direction: column;
         gap: 14px;
 
-        font-size: rem(14);
+        font-style: normal;
+
+        font-size: 14px;
         line-height: 140%;
         margin-bottom: 43px;
 
@@ -148,27 +139,19 @@ body {
     }
 
 }
-
-.social__link{
-    width: 26px;
-    height: 26px;
-    transition: .3;
-
+.social{
     display: flex;
-    justify-content: center;
-    align-items: center;
+    gap: 20px;
 
-    &:hover{
-        cursor: pointer;
-        opacity: .7;
+    @media (max-width: $laptop){
+        padding-left: 0;
+    }
+    
+    @media (max-width: $tablet){
+        margin-bottom: 30px;
     }
 }
-.social__e{
-    width: 18px;
-}
-.social__fb{
-    width: 13px;
-}
+
 
 .copyright {
 

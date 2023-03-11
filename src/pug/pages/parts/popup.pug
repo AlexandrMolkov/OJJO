@@ -1,22 +1,22 @@
 .popup-registration#popupreg
     .popup-registration__inner
-        h3.title.popup-registration__title Регитрация
-        button#regexitbtn.popup-registration__exit-button
-        form.form.popup-registration__form(action="#")
+        .title.popup-registration__title Регитрация
+        button.popup-registration__exit-button
+        form#regform.form.popup-registration__form(action="#")
             .form__row.form__row_w-100.form__row_mb_30
-                input.form__input(type="email" placeholder="Введите вашу почту")     
-                input.form__input(type="tel" placeholder="Введите ваш телефон")
-                input.form__input(type="text" placeholder="Придумайте пароль")
-                input.form__input(type="text" placeholder="Повторите пароль")
+                input#regmail.form__input(type="email" placeholder="Введите вашу почту")     
+                input#regtel.form__input(type="tel" placeholder="Введите ваш телефон")
+                input#regpass.form__input(type="text" placeholder="Придумайте пароль")
+                input#regpassconf.form__input(type="text" placeholder="Повторите пароль")
             button.btn.btn_white(type="submit") Отправить
 
-.popup-registration#popupauth.visible
+.popup-registration#popupauth
     .popup-registration__inner
-        h3.title.popup-registration__title Вход
-        button#regexitbtn.popup-registration__exit-button
-        form.form.popup-registration__form(action="#")
+        .title.popup-registration__title Вход
+        button.popup-registration__exit-button
+        form#authform.form.popup-registration__form(action="#")
             .form__row.form__row_w-100.form__row_mb_30
-                input.form__input(type="email" placeholder="Введите почту")  
-                input.form__input(type="text" placeholder="Введите пароль")
+                input#authmail.form__input(type="email" placeholder="Введите почту")  
+                input#authpass.form__input(type="text" placeholder="Введите пароль")
             button.btn.btn_white(type="submit") Войти
         

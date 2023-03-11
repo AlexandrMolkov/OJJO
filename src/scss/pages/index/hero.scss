@@ -1,12 +1,10 @@
 .hero{
     position: relative;
     height: 78vh;
-    min-height: 760px;
-    max-height: 950px;
+    min-height: 950px;
     background-color: $black;
     background-image: url('../img/bgc.jpg');
     background-size: cover;
-    background-attachment: fixed;
     background-position: center;
     
     display: flex;

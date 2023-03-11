@@ -3,7 +3,7 @@ include pug/common/mixins/header
 
 doctype html
 html(lang="ru")
-    +head('Главная')
+    +head('Контакты')
     body
         .wrapper
             +header([{link:'#', content:'Контрагентам'},
@@ -46,9 +46,10 @@ html(lang="ru")
                         picture
                             source(srcset="img/contact__maps.webp" type="image/webp")
                             img.cover(src="img/contact__maps.png" alt="карта")
-
+            
 
             include pug/footer
+            include pug/pages/parts/popup
         script(src="js/app.min.js")
        
 

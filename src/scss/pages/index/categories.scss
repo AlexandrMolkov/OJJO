@@ -63,6 +63,11 @@
         
 
 
+    &:focus{
+        .categories-item__image{
+            transform: scale(1.05);
+       }
+    }
 
     &:hover{
         .categories-item__image{
@@ -182,7 +187,7 @@
             background-color: $black;
             border: 0;
             border-bottom: 0;
-            min-height: 61px;
+            //min-height: 61px;
             box-shadow: none;
         }
         &:not(.tabs__button_current){

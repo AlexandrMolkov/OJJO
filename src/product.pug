@@ -3,7 +3,7 @@ include pug/common/mixins/header
 
 doctype html
 html(lang="ru")
-    +head('Главная')
+    +head('Товар')
     body
         .wrapper
             +header([{link:'#', content:'Контрагентам'},
@@ -21,7 +21,9 @@ html(lang="ru")
                 include pug/pages/product/desc
                 include pug/pages/product/more
                 include pug/pages/parts/subscribe
+                
             include pug/footer
+            include pug/pages/parts/popup
         <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/panzoom/panzoom.umd.js"></script>
         script(src="js/app.min.js")

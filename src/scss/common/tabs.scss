@@ -21,6 +21,10 @@
             border: $borderWeight solid $borderColor;
             border-bottom: $borderWeight solid transparent;
         }
+
+        &:focus{
+            outline: none;
+        }
     }
 
     &__content{
