@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <link rel="shortcut icon" href="img/logo/logo.svg" type="image/x-icon"/>
     <link rel="stylesheet" href="css/style.min.css"/>
-    <title>Главная</title><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" >
+    <title>Каталог</title><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" >
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/choices.js/public/assets/styles/choices.min.css" >
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/panzoom/panzoom.css" >
   </head>
@@ -17,7 +17,8 @@
         <div class="header__content container">
           <div class="header__content-row">
             <div class="header__form-input-wrapper">
-              <div class="header__form-input-exit"></div>
+              <button class="header__form-input-exit"></button>
+              <button class="header__form-input-search"></button>
               <input class="header__form-input" type="text" name="search" form="headerform"/>
             </div>
             <div class="header__item-left">
@@ -34,8 +35,8 @@
                 <button class="search"><span>Поиск</span></button>
               </form>
               <div class="account-buttons">
-                <button class="account-btn">Вход</button><span class="slash">/</span>
-                <button class="account-btn">Регистрация</button>
+                <button class="account-btn account-auth">Вход</button><span class="slash">/</span>
+                <button class="account-btn account-reg">Регистрация</button>
               </div>
               <div class="header__buttons">
                 <button class="header__btn"><svg class="account"  width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -61,11 +62,11 @@
                 <nav class="nav nav-mobile">
                   <ul class="nav__ul nav__ul-horizontal">
                     <li class="nav__li"> 
-                      <button class="account-btn">Вход</button>
+                      <button class="account-btn account-auth">Вход</button>
                     </li>
                     <li class="nav__link slash">/</li>
                     <li class="nav__li"> 
-                      <button class="account-btn">Регистрация</button>
+                      <button class="account-btn account-reg">Регистрация</button>
                     </li>
                   </ul>
                   <ul class="nav__ul nav__ul-horizontal">
@@ -83,10 +84,18 @@
                     </li>
                   </ul>
                 </nav>
-                <div class="mobile-input-wrapper">
-                   <svg class="search-icon" width="26" height="26" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <ul class="social"> 
+                  <li><a class="social__link" href="#"><img src="img/svg/social/youtube-white.svg" alt="youtube" width="26" height="26"/></a></li>
+                  <li><a class="social__link" href="#"><img src="img/svg/social/vk-white.svg" alt="vk" width="26" height="26"/></a></li>
+                  <li><a class="social__link" href="#"><img class="social__fb" src="img/svg/social/facebook-white.svg" alt="facebook" width="26" height="26"/></a></li>
+                  <li><a class="social__link" href="#"><img src="img/svg/social/telegram-white.svg" alt="telegram" width="26" height="26"/></a></li>
+                  <li><a class="social__link" href="#"><img class="social__e" src="img/svg/social/e-white.svg" alt="telegram" width="26" height="26"/></a></li>
+                </ul>
+                <div class="mobile-input-wrapper"> 
+                  <button class="btn-search"><svg class="search-icon" width="26" height="26" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M19 17L13.846 11.846C14.7988 10.3979 15.1805 8.64774 14.917 6.93442C14.6536 5.22111 13.7638 3.66648 12.4199 2.57154C11.076 1.47659 9.37369 0.919227 7.64247 1.00735C5.91125 1.09547 4.27431 1.82281 3.04857 3.04855C1.82283 4.27429 1.09549 5.91123 1.00737 7.64245C0.91925 9.37366 1.47662 11.076 2.57156 12.4199C3.6665 13.7637 5.22113 14.6535 6.93445 14.917C8.64777 15.1804 10.3979 14.7988 11.846 13.846L17 19L19 17ZM3 7.99998C3 5.24298 5.243 2.99998 8 2.99998C10.757 2.99998 13 5.24298 13 7.99998C13 10.757 10.757 13 8 13C5.243 13 3 10.757 3 7.99998Z" fill="white"/>
 </svg>
+                  </button>
                   <input class="header__form-input header__form-input-mobile" type="text" name="search" form="headerform"/>
                 </div>
               </div>
@@ -101,28 +110,41 @@
               <h1 class="catalog__title visually-hidden">catalog</h1>
               <div class="filter-list">
                 <select class="js-choice js-choice-brand" name="brand">
-                  <option>brand 1</option>
-                  <option>brand 2</option>
+                  <option data-hide="true">Бренд </option>
+                  <option value="brand 1">brand 1</option>
+                  <option value="brand 2">brand 2</option>
+                  <option value="brand 3">brand 3</option>
+                  <option value="brand 4">brand 4</option>
                 </select>
                 <select class="js-choice js-choice-price" name="price">
-                  <option>1000</option>
-                  <option>2000</option>
+                  <option>Цена</option>
+                  <option value="1000">1000</option>
+                  <option value="5000">5000</option>
+                  <option value="10000">10000</option>
+                  <option value="25000">25000</option>
                 </select>
                 <select class="js-choice js-choice-whom" name="whom">
-                  <option>male</option>
-                  <option>female</option>
+                  <option>Для кого</option>
+                  <option value="male">male</option>
+                  <option value="female">female</option>
                 </select>
                 <select class="js-choice js-choice-collection" name="collection">
-                  <option>collection 1</option>
-                  <option>collection 2</option>
+                  <option>Коллекция </option>
+                  <option value="collection 1">collection 1</option>
+                  <option value="collection 2">collection 2</option>
+                  <option value="collection 3">collection 3</option>
                 </select>
                 <select class="js-choice js-choice-season" name="season">
-                  <option>winter</option>
-                  <option>summer</option>
+                  <option>Сезон</option>
+                  <option value="winter">winter</option>
+                  <option value="summer">summer</option>
                 </select>
                 <select class="js-choice js-choice-event" name="event">
-                  <option>event 1</option>
-                  <option>event 2</option>
+                  <option>Событие </option>
+                  <option value="event 1">event 1</option>
+                  <option value="event 2">event 2</option>
+                  <option value="event 3">event 3</option>
+                  <option value="event 4">event 4</option>
                 </select>
               </div>
               <div class="catalog__items">
@@ -132,21 +154,21 @@
                       <source srcset="img/rings.webp" type="image/webp"><img class="product__img" src="img/rings.png" alt="кольца">
                     </picture>
                     <p class="product__type">Подвеска</p>
-                    <p class="product__name">Dolce & Gabanna</p><a class="btn product__btn" href="#">175 000 ₽</a><a class="product__link" href="product.html"></a>
+                    <p class="product__name">Dolce & Gabanna</p><a class="btn product__btn" href="product.html">175 000 ₽</a><a class="product__link" href="product.html"></a>
                   </div>
                   <div class="product">
                     <picture>
                       <source srcset="img/rings.webp" type="image/webp"><img class="product__img" src="img/rings.png" alt="кольца">
                     </picture>
                     <p class="product__type">Подвеска</p>
-                    <p class="product__name">Dolce & Gabanna</p><a class="btn product__btn" href="#">175 000 ₽</a><a class="product__link" href="product.html"></a>
+                    <p class="product__name">Dolce & Gabanna</p><a class="btn product__btn" href="product.html">175 000 ₽</a><a class="product__link" href="product.html"></a>
                   </div>
                   <div class="product">
                     <picture>
                       <source srcset="img/rings.webp" type="image/webp"><img class="product__img" src="img/rings.png" alt="кольца">
                     </picture>
                     <p class="product__type">Подвеска</p>
-                    <p class="product__name">Dolce & Gabanna</p><a class="btn product__btn" href="#">175 000 ₽</a><a class="product__link" href="product.html"></a>
+                    <p class="product__name">Dolce & Gabanna</p><a class="btn product__btn" href="product.html">175 000 ₽</a><a class="product__link" href="product.html"></a>
                   </div>
                 </div>
                 <div class="catalog__items-row">
@@ -155,46 +177,48 @@
                       <source srcset="img/rings.webp" type="image/webp"><img class="product__img" src="img/rings.png" alt="кольца">
                     </picture>
                     <p class="product__type">Подвеска</p>
-                    <p class="product__name">Dolce & Gabanna</p><a class="btn product__btn" href="#">175 000 ₽</a><a class="product__link" href="product.html"></a>
+                    <p class="product__name">Dolce & Gabanna</p><a class="btn product__btn" href="product.html">175 000 ₽</a><a class="product__link" href="product.html"></a>
                   </div>
                   <div class="product">
                     <picture>
                       <source srcset="img/rings.webp" type="image/webp"><img class="product__img" src="img/rings.png" alt="кольца">
                     </picture>
                     <p class="product__type">Подвеска</p>
-                    <p class="product__name">Dolce & Gabanna</p><a class="btn product__btn" href="#">175 000 ₽</a><a class="product__link" href="product.html"></a>
+                    <p class="product__name">Dolce & Gabanna</p><a class="btn product__btn" href="product.html">175 000 ₽</a><a class="product__link" href="product.html"></a>
                   </div>
                   <div class="product">
                     <picture>
                       <source srcset="img/rings.webp" type="image/webp"><img class="product__img" src="img/rings.png" alt="кольца">
                     </picture>
                     <p class="product__type">Подвеска</p>
-                    <p class="product__name">Dolce & Gabanna</p><a class="btn product__btn" href="#">175 000 ₽</a><a class="product__link" href="product.html"></a>
+                    <p class="product__name">Dolce & Gabanna</p><a class="btn product__btn" href="product.html">175 000 ₽</a><a class="product__link" href="product.html"></a>
                   </div>
                 </div>
               </div><a class="btn catalog__btn" href="#">покажите еще</a>
               <div class="catalog-bottom">
-                <div class="catalog-bottom__text-block">
-                  <div class="catalog-bottom__text" id="text">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet, lorem eu commodo porttitor erat. Amet mauris cursus bibendum in egestas. Nulla porttitor amet quam elit, mauris. Tortor egestas dignissim augue suspendisse rutrum pretium lobortis dolor. Commodo sagittis at amet faucibus faucibus id. Bibendum placerat convallis gravida eu quisque et augue. Sed dignissim amet ut vitae at ornare sed.</p>
-                    <p>Commodo sagittis at amet faucibus faucibus id. Bibendum placerat convallis gravida eu quisque et augue. Sed dignissim amet ut vitae at ornare sed.</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet, lorem eu commodo porttitor erat. Amet mauris cursus bibendum in egestas. Nulla porttitor amet quam elit, mauris. Tortor egestas dignissim augue suspendisse rutrum pretium lobortis dolor. Commodo sagittis at amet faucibus faucibus id. Bibendum placerat convallis gravida eu quisque et augue. Sed dignissim amet ut vitae at ornare sed.</p>
-                    <p>Commodo sagittis at amet faucibus faucibus id. Bibendum placerat convallis gravida eu quisque et augue. Sed dignissim amet ut vitae at ornare sed.</p>
+                <div class="catalog-bottom__content">
+                  <div class="catalog-bottom__text-block">
+                    <div class="catalog-bottom__text" id="text">
+                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet, lorem eu commodo porttitor erat. Amet mauris cursus bibendum in egestas. Nulla porttitor amet quam elit, mauris. Tortor egestas dignissim augue suspendisse rutrum pretium lobortis dolor. Commodo sagittis at amet faucibus faucibus id. Bibendum placerat convallis gravida eu quisque et augue. Sed dignissim amet ut vitae at ornare sed.</p>
+                      <p>Commodo sagittis at amet faucibus faucibus id. Bibendum placerat convallis gravida eu quisque et augue. Sed dignissim amet ut vitae at ornare sed.</p>
+                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet, lorem eu commodo porttitor erat. Amet mauris cursus bibendum in egestas. Nulla porttitor amet quam elit, mauris. Tortor egestas dignissim augue suspendisse rutrum pretium lobortis dolor. Commodo sagittis at amet faucibus faucibus id. Bibendum placerat convallis gravida eu quisque et augue. Sed dignissim amet ut vitae at ornare sed.</p>
+                      <p>Commodo sagittis at amet faucibus faucibus id. Bibendum placerat convallis gravida eu quisque et augue. Sed dignissim amet ut vitae at ornare sed.</p>
+                    </div>
+                    <button class="read-more catalog-bottom__read-more" data-target="text">читать полностью</button>
                   </div>
-                  <button class="read-more catalog-bottom__read-more" data-target="text">читать полностью</button>
-                </div>
-                <div class="catalog-bottom__icons">
-                  <div class="catalog-bottom__icon catalog-bottom__icon-deliver"> <img src="img/svg/delivery.svg" alt="" aria-hidden="true">
-                    <p>Бесплатная доставка</p>
-                  </div>
-                  <div class="catalog-bottom__icon catalog-bottom__icon-design"> <img src="img/svg/individual.svg" alt="" aria-hidden="true">
-                    <p>Индивидуальный дизайн</p>
-                  </div>
-                  <div class="catalog-bottom__icon catalog-bottom__icon-fitting"> <img src="img/svg/ribbon-design.svg" alt="" aria-hidden="true">
-                    <p>Бесплатная примерка</p>
-                  </div>
-                  <div class="catalog-bottom__icon catalog-bottom__icon-approach"> <img src="img/svg/jewelry.svg" alt="" aria-hidden="true">
-                    <p>Личный подход</p>
+                  <div class="catalog-bottom__icons">
+                    <div class="catalog-bottom__icon catalog-bottom__icon-deliver"> <img src="img/svg/delivery.svg" alt="" aria-hidden="true">
+                      <p>Бесплатная доставка</p>
+                    </div>
+                    <div class="catalog-bottom__icon catalog-bottom__icon-design"> <img src="img/svg/individual.svg" alt="" aria-hidden="true">
+                      <p>Индивидуальный дизайн</p>
+                    </div>
+                    <div class="catalog-bottom__icon catalog-bottom__icon-fitting"> <img src="img/svg/ribbon-design.svg" alt="" aria-hidden="true">
+                      <p>Бесплатная примерка</p>
+                    </div>
+                    <div class="catalog-bottom__icon catalog-bottom__icon-approach"> <img src="img/svg/jewelry.svg" alt="" aria-hidden="true">
+                      <p>Личный подход</p>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -214,12 +238,12 @@
                 </ul>
               </div>
               <div class="subscribe__item">
-                <div class="form subscribe__form">
+                <form class="form subscribe__form" id="subscrform">
                   <div class="form__row">
-                    <input class="form__input" type="email" placeholder="Ваш e-mail">
+                    <input class="form__input form__input_w-200" id="subscrmail" type="email" placeholder="Ваш e-mail">
                     <button class="form__btn btn" type="submit">отправить</button>
                   </div>
-                </div>
+                </form>
               </div>
             </div>
           </div>
@@ -244,12 +268,18 @@
             </div>
             <div class="footer__item">
               <div class="footer__title">контакты</div>
-              <div class="contacts"><a class="contact-phone" href="tel:+78122345655">8 (812) 234-56-55</a><a class="contact-phone" href="tel:+78122345655">8 (812) 234-56-55</a><a class="contact-mail" href="mailto:ojjo@ojjo.ru">ojjo@ojjo.ru</a></div>
+              <address class="contacts"><a class="contact-phone" href="tel:+78122345655">8 (812) 234-56-55</a><a class="contact-phone" href="tel:+78122345655">8 (812) 234-56-55</a><a class="contact-mail" href="mailto:ojjo@ojjo.ru">ojjo@ojjo.ru</a></address>
             </div>
             <div class="footer__item">
               <div class="footer__title">социальные сети</div>
               <p class="footer__par">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ullamcorper justo, nec, pellentesque.</p>
-              <div class="social"> <a class="social__link" href="#"><img src="img/svg/social/youtube.svg" alt="youtube" width="26" height="26"></a><a class="social__link" href="#"><img src="img/svg/social/vk.svg" alt="vk" width="26" height="26"></a><a class="social__link" href="#"><img class="social__fb" src="img/svg/social/facebook.svg" alt="facebook" width="26" height="26"></a><a class="social__link" href="#"><img src="img/svg/social/telegram.svg" alt="telegram" width="26" height="26"></a><a class="social__link" href="#"><img class="social__e" src="img/svg/social/e.svg" alt="telegram" width="26" height="26"></a></div>
+              <ul class="social"> 
+                <li><a class="social__link" href="#"><img src="img/svg/social/youtube.svg" alt="youtube" width="26" height="26"></a></li>
+                <li><a class="social__link" href="#"><img src="img/svg/social/vk.svg" alt="vk" width="26" height="26"></a></li>
+                <li><a class="social__link" href="#"><img class="social__fb" src="img/svg/social/facebook.svg" alt="facebook" width="26" height="26"></a></li>
+                <li><a class="social__link" href="#"><img src="img/svg/social/telegram.svg" alt="telegram" width="26" height="26"></a></li>
+                <li><a class="social__link" href="#"><img class="social__e" src="img/svg/social/e.svg" alt="telegram" width="26" height="26"></a></li>
+              </ul>
             </div>
           </div>
           <div class="copyright">
@@ -260,6 +290,34 @@
           </div>
         </div>
       </footer>
+      <div class="popup-registration" id="popupreg">
+        <div class="popup-registration__inner">
+          <div class="title popup-registration__title">Регитрация</div>
+          <button class="popup-registration__exit-button"></button>
+          <form class="form popup-registration__form" id="regform" action="#">
+            <div class="form__row form__row_w-100 form__row_mb_30">
+              <input class="form__input" id="regmail" type="email" placeholder="Введите вашу почту">
+              <input class="form__input" id="regtel" type="tel" placeholder="Введите ваш телефон">
+              <input class="form__input" id="regpass" type="text" placeholder="Придумайте пароль">
+              <input class="form__input" id="regpassconf" type="text" placeholder="Повторите пароль">
+            </div>
+            <button class="btn btn_white" type="submit">Отправить</button>
+          </form>
+        </div>
+      </div>
+      <div class="popup-registration" id="popupauth">
+        <div class="popup-registration__inner">
+          <div class="title popup-registration__title">Вход</div>
+          <button class="popup-registration__exit-button"></button>
+          <form class="form popup-registration__form" id="authform" action="#">
+            <div class="form__row form__row_w-100 form__row_mb_30">
+              <input class="form__input" id="authmail" type="email" placeholder="Введите почту">
+              <input class="form__input" id="authpass" type="text" placeholder="Введите пароль">
+            </div>
+            <button class="btn btn_white" type="submit">Войти</button>
+          </form>
+        </div>
+      </div>
     </div><script src="https://cdn.jsdelivr.net/npm/choices.js/public/assets/scripts/choices.min.js"></script>
     <script src="js/app.min.js"></script>
   </body>

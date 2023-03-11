@@ -17,7 +17,8 @@
         <div class="header__content container">
           <div class="header__content-row">
             <div class="header__form-input-wrapper">
-              <div class="header__form-input-exit"></div>
+              <button class="header__form-input-exit"></button>
+              <button class="header__form-input-search"></button>
               <input class="header__form-input" type="text" name="search" form="headerform"/>
             </div>
             <div class="header__item-left">
@@ -34,8 +35,8 @@
                 <button class="search"><span>Поиск</span></button>
               </form>
               <div class="account-buttons">
-                <button class="account-btn">Вход</button><span class="slash">/</span>
-                <button class="account-btn">Регистрация</button>
+                <button class="account-btn account-auth">Вход</button><span class="slash">/</span>
+                <button class="account-btn account-reg">Регистрация</button>
               </div>
               <div class="header__buttons">
                 <button class="header__btn"><svg class="account"  width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -61,11 +62,11 @@
                 <nav class="nav nav-mobile">
                   <ul class="nav__ul nav__ul-horizontal">
                     <li class="nav__li"> 
-                      <button class="account-btn">Вход</button>
+                      <button class="account-btn account-auth">Вход</button>
                     </li>
                     <li class="nav__link slash">/</li>
                     <li class="nav__li"> 
-                      <button class="account-btn">Регистрация</button>
+                      <button class="account-btn account-reg">Регистрация</button>
                     </li>
                   </ul>
                   <ul class="nav__ul nav__ul-horizontal">
@@ -83,10 +84,18 @@
                     </li>
                   </ul>
                 </nav>
-                <div class="mobile-input-wrapper">
-                   <svg class="search-icon" width="26" height="26" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <ul class="social"> 
+                  <li><a class="social__link" href="#"><img src="img/svg/social/youtube-white.svg" alt="youtube" width="26" height="26"/></a></li>
+                  <li><a class="social__link" href="#"><img src="img/svg/social/vk-white.svg" alt="vk" width="26" height="26"/></a></li>
+                  <li><a class="social__link" href="#"><img class="social__fb" src="img/svg/social/facebook-white.svg" alt="facebook" width="26" height="26"/></a></li>
+                  <li><a class="social__link" href="#"><img src="img/svg/social/telegram-white.svg" alt="telegram" width="26" height="26"/></a></li>
+                  <li><a class="social__link" href="#"><img class="social__e" src="img/svg/social/e-white.svg" alt="telegram" width="26" height="26"/></a></li>
+                </ul>
+                <div class="mobile-input-wrapper"> 
+                  <button class="btn-search"><svg class="search-icon" width="26" height="26" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M19 17L13.846 11.846C14.7988 10.3979 15.1805 8.64774 14.917 6.93442C14.6536 5.22111 13.7638 3.66648 12.4199 2.57154C11.076 1.47659 9.37369 0.919227 7.64247 1.00735C5.91125 1.09547 4.27431 1.82281 3.04857 3.04855C1.82283 4.27429 1.09549 5.91123 1.00737 7.64245C0.91925 9.37366 1.47662 11.076 2.57156 12.4199C3.6665 13.7637 5.22113 14.6535 6.93445 14.917C8.64777 15.1804 10.3979 14.7988 11.846 13.846L17 19L19 17ZM3 7.99998C3 5.24298 5.243 2.99998 8 2.99998C10.757 2.99998 13 5.24298 13 7.99998C13 10.757 10.757 13 8 13C5.243 13 3 10.757 3 7.99998Z" fill="white"/>
 </svg>
+                  </button>
                   <input class="header__form-input header__form-input-mobile" type="text" name="search" form="headerform"/>
                 </div>
               </div>
@@ -337,7 +346,7 @@
             <p class="salon__subtitle subtitle">Не знаете, что выбрать?</p>
             <h2 class="salon__title title">Посетите наши салоны в Москве</h2>
             <div class="salon__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut duis tortor vitae pellentesque egestas quam pulvinar. Pellentesque porttitor velit sit pellentesque. Suspendisse donec pretium id dignissim. Dignissim ultrices eget orci viverra. Egestas quis et ut ultrices imperdiet lectus nulla tempus. Pharetra lorem sem purus nisi libero viverra ipsum.</div>
-            <button class="btn btn-white salon__btn">наши салоны</button>
+            <button class="btn btn_white salon__btn">наши салоны</button>
           </div>
         </section>
         <section class="blogs">
@@ -363,15 +372,15 @@
                   <source srcset="img/blog-3.webp" type="image/webp"><img class="blog__image" src="img/blog-3.jpg" alt="Кольца" width="350" height="370">
                 </picture>
               </div>
-            </div><a class="blogs__btb btn">читать наш блог</a>
+            </div><a class="blogs__btn btn">читать наш блог</a>
           </div>
         </section>
         <section class="gallery-section">
           <div class="gallery-section__content container">
             <p class="gallery-section__subtitle">#ojjo_jewerly</p>
             <h2 class="gallery-section__title title">Мы в социальных сетях</h2>
-            <div class="gallery"><a class="gallery__item gallery__item_big gallery__item-video" data-fancybox="gallery" data-caption="Optional caption" href="img/gallery-1.png">
-                <video class="fill" poster="img/gallery-1.png">
+            <div class="gallery"><a class="gallery__item gallery__item_big gallery__item-video" data-fancybox="video" data-caption="Optional caption" href="img/gallery-1.png">
+                <video poster="img/gallery-1.png">
                   <source src="#">
                 </video></a><a class="gallery__item" data-fancybox="gallery" data-caption="Optional caption" href="img/gallery-2.png">
                 <picture>
@@ -385,7 +394,7 @@
                 </picture></a><a class="gallery__item" data-fancybox="gallery" data-caption="Optional caption" href="img/gallery-5.png">
                 <picture>
                   <source srcset="img/gallery-5.webp" type="image/webp"><img class="fill gallery__img" src="img/gallery-5.png" alt="">
-                </picture></a><a class="gallery__item gallery__item_big gallery__item-video" data-fancybox="gallery" data-caption="Optional caption" href="img/gallery-6.png">
+                </picture></a><a class="gallery__item gallery__item_big gallery__item-video" data-fancybox="video2" data-caption="Optional caption" href="img/gallery-6.png">
                 <video class="fill" poster="img/gallery-6.png">
                   <source src="#">
                 </video></a></div>
@@ -404,12 +413,12 @@
                 </ul>
               </div>
               <div class="subscribe__item">
-                <div class="form subscribe__form">
+                <form class="form subscribe__form" id="subscrform">
                   <div class="form__row">
-                    <input class="form__input" type="email" placeholder="Ваш e-mail">
+                    <input class="form__input form__input_w-200" id="subscrmail" type="email" placeholder="Ваш e-mail">
                     <button class="form__btn btn" type="submit">отправить</button>
                   </div>
-                </div>
+                </form>
               </div>
             </div>
           </div>
@@ -434,12 +443,18 @@
             </div>
             <div class="footer__item">
               <div class="footer__title">контакты</div>
-              <div class="contacts"><a class="contact-phone" href="tel:+78122345655">8 (812) 234-56-55</a><a class="contact-phone" href="tel:+78122345655">8 (812) 234-56-55</a><a class="contact-mail" href="mailto:ojjo@ojjo.ru">ojjo@ojjo.ru</a></div>
+              <address class="contacts"><a class="contact-phone" href="tel:+78122345655">8 (812) 234-56-55</a><a class="contact-phone" href="tel:+78122345655">8 (812) 234-56-55</a><a class="contact-mail" href="mailto:ojjo@ojjo.ru">ojjo@ojjo.ru</a></address>
             </div>
             <div class="footer__item">
               <div class="footer__title">социальные сети</div>
               <p class="footer__par">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ullamcorper justo, nec, pellentesque.</p>
-              <div class="social"> <a class="social__link" href="#"><img src="img/svg/social/youtube.svg" alt="youtube" width="26" height="26"></a><a class="social__link" href="#"><img src="img/svg/social/vk.svg" alt="vk" width="26" height="26"></a><a class="social__link" href="#"><img class="social__fb" src="img/svg/social/facebook.svg" alt="facebook" width="26" height="26"></a><a class="social__link" href="#"><img src="img/svg/social/telegram.svg" alt="telegram" width="26" height="26"></a><a class="social__link" href="#"><img class="social__e" src="img/svg/social/e.svg" alt="telegram" width="26" height="26"></a></div>
+              <ul class="social"> 
+                <li><a class="social__link" href="#"><img src="img/svg/social/youtube.svg" alt="youtube" width="26" height="26"></a></li>
+                <li><a class="social__link" href="#"><img src="img/svg/social/vk.svg" alt="vk" width="26" height="26"></a></li>
+                <li><a class="social__link" href="#"><img class="social__fb" src="img/svg/social/facebook.svg" alt="facebook" width="26" height="26"></a></li>
+                <li><a class="social__link" href="#"><img src="img/svg/social/telegram.svg" alt="telegram" width="26" height="26"></a></li>
+                <li><a class="social__link" href="#"><img class="social__e" src="img/svg/social/e.svg" alt="telegram" width="26" height="26"></a></li>
+              </ul>
             </div>
           </div>
           <div class="copyright">
@@ -450,6 +465,34 @@
           </div>
         </div>
       </footer>
+      <div class="popup-registration" id="popupreg">
+        <div class="popup-registration__inner">
+          <div class="title popup-registration__title">Регитрация</div>
+          <button class="popup-registration__exit-button"></button>
+          <form class="form popup-registration__form" id="regform" action="#">
+            <div class="form__row form__row_w-100 form__row_mb_30">
+              <input class="form__input" id="regmail" type="email" placeholder="Введите вашу почту">
+              <input class="form__input" id="regtel" type="tel" placeholder="Введите ваш телефон">
+              <input class="form__input" id="regpass" type="text" placeholder="Придумайте пароль">
+              <input class="form__input" id="regpassconf" type="text" placeholder="Повторите пароль">
+            </div>
+            <button class="btn btn_white" type="submit">Отправить</button>
+          </form>
+        </div>
+      </div>
+      <div class="popup-registration" id="popupauth">
+        <div class="popup-registration__inner">
+          <div class="title popup-registration__title">Вход</div>
+          <button class="popup-registration__exit-button"></button>
+          <form class="form popup-registration__form" id="authform" action="#">
+            <div class="form__row form__row_w-100 form__row_mb_30">
+              <input class="form__input" id="authmail" type="email" placeholder="Введите почту">
+              <input class="form__input" id="authpass" type="text" placeholder="Введите пароль">
+            </div>
+            <button class="btn btn_white" type="submit">Войти</button>
+          </form>
+        </div>
+      </div>
     </div><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
     <script src="js/app.min.js"></script>
   </body>
