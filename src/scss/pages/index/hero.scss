@@ -12,10 +12,12 @@
     justify-content: end;
 
     &__title{
-        margin-bottom: 50px;
-        font-size: rem(36);
-        line-height: rem(49);
-        letter-spacing: em(1.3);
+        max-width: 940px;
+        margin: 0 auto 50px;
+
+        font-size: 36px;
+        line-height: 49px;
+        letter-spacing: 0.08em;
         font-family: 'Noto Serif';
         font-weight: 700;
         color: #fff;

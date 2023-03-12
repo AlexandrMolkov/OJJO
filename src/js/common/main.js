@@ -53,6 +53,10 @@ readmoreButtons.forEach((e) => {
             target.classList.add('show')
 
             target.style.height = target.scrollHeight + 'px'
+            if(target.dataset.transition) {
+                target.style.transition = target.dataset.transition
+            }
+            
             
 
             setTimeout(() => {
@@ -183,7 +187,7 @@ document.querySelectorAll('.account-auth').forEach( b => {
 document.querySelectorAll('.popup-registration').forEach(modal => {
     modal.addEventListener('click', e => {
         e.target.classList.remove('visible')
-        if(!document.querySelector('.header__mobile-menu').classList.contains('show')){
+        if(!document.querySelector('.header__mobile-menu').classList.contains('show') && e.target.classList.contains('popup-registration')){
             document.body.classList.remove(`lock`)
         }
         

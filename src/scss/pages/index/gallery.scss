@@ -51,9 +51,9 @@
             }
 
 
-            @media (max-width: $mobile){
+            @media (max-width: $mobileL){
             
-                grid-column: span 8;
+                grid-row: span 2;
     
             }
         }

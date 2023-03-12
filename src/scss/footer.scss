@@ -138,19 +138,18 @@ body {
         }
     }
 
-}
-.social{
-    display: flex;
-    gap: 20px;
-
-    @media (max-width: $laptop){
-        padding-left: 0;
-    }
+    .social{
     
-    @media (max-width: $tablet){
-        margin-bottom: 30px;
+        @media (max-width: $laptop){
+            padding-left: 0;
+        }
+        
+        @media (max-width: $tablet){
+            margin-bottom: 30px;
+        }
     }
 }
+
 
 
 .copyright {
